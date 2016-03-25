@@ -36,7 +36,6 @@ def pin_irq_isr_handle():
     
     ItStatus1 = si443x_readRegister(0x03)
     ItStatus2 = si443x_readRegister(0x04)
-    print('isr handle %02X - %02X' %(ItStatus1, ItStatus2))
 
     if (ItStatus1 & 0x01) == 0x01:
         si443x_writeRegister(0x08, 0x02)
@@ -145,16 +144,7 @@ def si443x_sendTest():
 
     print("low event detect for pin irq-1\n")
     ItStatus1 = si443x_readRegister(0x03)			
-    ItStatus2 = si443x_readRegister(0x04)		
-
-#    while irq_flag == 0:
-#        pass
-#    irq_flag = 0
-#
-#    print("low event detect for pin irq-2\n")
-#	  
-#    ItStatus1 = si443x_readRegister(0x03)			
-#    ItStatus2 = si443x_readRegister(0x04)			
+    ItStatus2 = si443x_readRegister(0x04)					
 
     si443x_writeRegister(0x75, 0x53)		
     si443x_writeRegister(0x76, 0x64)		
