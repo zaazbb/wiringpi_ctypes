@@ -15,6 +15,18 @@ wiringPiSetup = _libwiringpi.wiringPiSetup
 wiringPiSetup.restype = c_int
 wiringPiSetup.argtype = []
 
+wiringPiSetupSys = _libwiringpi.wiringPiSetupSys
+wiringPiSetupSys.restype = c_int
+wiringPiSetupSys.argtype = []
+
+wiringPiSetupGpio = _libwiringpi.wiringPiSetupGpio
+wiringPiSetupGpio.restype = c_int
+wiringPiSetupGpio.argtype = []
+
+wiringPiSetupPhys = _libwiringpi.wiringPiSetupPhys
+wiringPiSetupPhys.restype = c_int
+wiringPiSetupPhys.argtype = []
+
 
 pinMode = _libwiringpi.pinMode
 pinMode.restype = None
@@ -31,6 +43,19 @@ digitalRead.argtype = [c_int]
 digitalWrite = _libwiringpi.digitalWrite
 digitalWrite.restype = None
 digitalWrite.argtype = [c_int, c_int]
+
+pwmWrite = _libwiringpi.pwmWrite
+pwmWrite.restype = None
+pwmWrite.argtype = [c_int, c_int]
+
+analogRead = _libwiringpi.analogRead
+analogRead.restype = c_int
+analogRead.argtype = [c_int]
+
+analogWrite = _libwiringpi.analogWrite
+analogWrite.restype = None
+analogWrite.argtype = [c_int, c_int]
+
 
 
 wiringPiISR_ = _libwiringpi.wiringPiISR
