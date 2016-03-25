@@ -1,6 +1,6 @@
 # by jf
 # zaazbb <zaazbb@163.com>
-# https://github.com/zaazbb/libnfc_ctypes
+# https://github.com/zaazbb/libwiringpi_ctypes
 
 from _wiringpi import *
 
